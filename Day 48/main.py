@@ -15,8 +15,9 @@ item_ids = [item.get_attribute("id") for item in items]
 timeout = time.time() + 5
 five_min = time.time() + 60*5 # 5minutes
 
-for item in item_ids:
-    print(item)
+all_prices = driver.find_elements_by_css_selector("#store b")
+item_prices = []
+
 
 while True:
     cookie.click()
